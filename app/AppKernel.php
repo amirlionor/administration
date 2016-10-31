@@ -8,6 +8,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -29,15 +30,15 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             
             
-            
-             // extend the ``FOSUserBundle``
+             //
              new FOS\UserBundle\FOSUserBundle(),
              new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            // OR
+             // 
             
             
             new SiteBundle\SiteBundle(),
             new AdministrationBundle\AdministrationBundle(),
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
